@@ -26,13 +26,12 @@ hi blue4   guibg=#5f87ff ctermbg=69      guifg=#000000 ctermfg=0
 hi pink    guibg=#ffd7d7 ctermbg=224     guifg=#000000 ctermfg=0
 hi pink2   guibg=#ffafaf ctermbg=217     guifg=#000000 ctermfg=0
 hi pink3   guibg=#ff5faf ctermbg=205     guifg=#000000 ctermfg=0
-
 hi grey    guibg=#808080 ctermbg=8
-hi grey2   guibg=#b2b2b2 ctermbg=249
-hi grey3   guibg=#d0d0d0 ctermbg=252
+hi grey2   guibg=#b2b2b2 ctermbg=249     guifg=#000000 ctermfg=0
+hi grey3   guibg=#d0d0d0 ctermbg=252     guifg=#000000 ctermfg=0
 hi brown   guibg=brown   ctermbg=brown
-hi cyan    guibg=cyan    ctermbg=cyan
-hi white   guibg=white   ctermbg=white
+hi cyan    guibg=cyan    ctermbg=cyan    guifg=#000000 ctermfg=0
+hi white   guibg=white   ctermbg=white   guifg=#000000 ctermfg=0
 
 hi yellowfg guifg=yellow  ctermfg=yellow
 hi redfg    guifg=red     ctermfg=red
