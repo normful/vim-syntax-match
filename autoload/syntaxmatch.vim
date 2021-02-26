@@ -6,9 +6,14 @@ function! syntaxmatch#saveSyntax()
     return
   endif
 
+  " also don't save syntax if this is a .vimrc
+  if getbufvar(bufnr("%"), "&filetype") == 'vim'
+    return
+  endif
+
   let l:syntax = s:getSyntaxCommands()
   let l:syntaxfile = s:getSyntaxFile()
-  
+
   " echo 'Syntax file is: ' . l:syntaxfile
   if filewritable(s:getSyntaxDir()) != 2
     echoe '[syntaxmatch] Cannot write syntax file ' . l:syntaxfile . ' to directory ' . s:getSyntaxDir() . ' as not writable'
@@ -168,7 +173,7 @@ endfunction
 function! s:getSyntaxFile()
   let l:curdir = s:getSyntaxDir()
   let l:curfile = s:getCurFile()
-  let l:syntaxfile = l:curdir . '/' . '.' . l:curfile . '.syntax' 
+  let l:syntaxfile = l:curdir . '/' . '.' . l:curfile . '.syntax'
   return l:syntaxfile
 endfunction
 
